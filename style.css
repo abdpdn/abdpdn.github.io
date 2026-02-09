@@ -2,52 +2,55 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
   background: #f7f7f7;
   color: #222;
 }
 
 header {
   background: #1f2933;
-  color: #ffffff;
+  color: #fff;
   padding: 2rem;
   text-align: center;
-}
-
-header h1 {
-  margin-bottom: 0.3rem;
 }
 
 section {
   max-width: 900px;
   margin: auto;
+  background: #fff;
   padding: 2rem;
-  background: #ffffff;
   margin-top: 1.5rem;
   border-radius: 6px;
 }
 
-.profile {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.profile img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-}
-
 h2 {
   color: #1f2933;
-  margin-bottom: 0.8rem;
 }
 
-ul {
-  padding-left: 1.2rem;
+#arxiv-papers {
+  margin-top: 1rem;
+}
+
+.paper {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #2563eb;
+  background: #f9fafb;
+  border-radius: 4px;
+}
+
+.paper.latest {
+  animation: glow 1.8s infinite alternate;
+  background: #eef4ff;
+}
+
+.paper h3 {
+  margin: 0 0 0.3rem;
+}
+
+.paper p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 a {
@@ -55,13 +58,17 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 footer {
   text-align: center;
   padding: 1.5rem;
-  margin-top: 2rem;
   color: #555;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+  }
+  to {
+    box-shadow: 0 0 14px rgba(37, 99, 235, 0.9);
+  }
 }
