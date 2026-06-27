@@ -4,13 +4,13 @@ window.onload = function () {
 
     // Apply saved theme
     const isDark = localStorage.getItem("theme") === "dark";
-    document.body.classList.toggle("dark", isDark);
+    document.documentElement.classList.toggle("dark", isDark);
 
     // Theme toggle
     if (button) {
         button.addEventListener("click", function () {
 
-            const dark = document.body.classList.toggle("dark");
+            const dark = document.documentElement.classList.toggle("dark");
             localStorage.setItem("theme", dark ? "dark" : "light");
 
         });
