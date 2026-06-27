@@ -1,10 +1,222 @@
+/* ===========================
+   Academic Website CSS
+   =========================== */
 
-body{font-family:Arial,sans-serif;margin:0;background:#f5f7fb;color:#222}
-header{background:#1f3b63;color:#fff;padding:18px 5%;display:flex;justify-content:space-between;align-items:center}
-nav a{color:#fff;text-decoration:none;margin:0 10px}
-main{max-width:1100px;margin:40px auto;padding:0 20px}
-.card{background:#fff;padding:28px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-footer{text-align:center;padding:20px;color:#666}
-.hero{display:flex;gap:40px;align-items:center}.hero img{width:220px;border-radius:8px}
-.dark{background:#111;color:#eee}.dark .card{background:#222}.dark header{background:#000}
-@media(max-width:768px){header{flex-direction:column}.hero{flex-direction:column;text-align:center}}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.7;
+    transition:background .3s,color .3s;
+}
+
+/* ================= Header ================= */
+
+header{
+    background:#1f3b63;
+    color:white;
+    padding:18px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header h1{
+    font-size:1.5rem;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.25s;
+}
+
+nav a:hover{
+    color:#d8e7ff;
+}
+
+/* ================= Main ================= */
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+}
+
+/* ================= Cards ================= */
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+/* ================= Hero ================= */
+
+.hero{
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #dddddd;
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+    flex-shrink:0;
+}
+
+.hero h1{
+    font-size:2.8rem;
+    margin-bottom:10px;
+}
+
+.hero h3{
+    color:#1f3b63;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.hero p{
+    margin-bottom:12px;
+}
+
+/* ================= Lists ================= */
+
+ul,ol{
+    padding-left:24px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+/* ================= Buttons ================= */
+
+button{
+    cursor:pointer;
+    border:none;
+    background:white;
+    padding:8px 14px;
+    border-radius:6px;
+    font-size:15px;
+}
+
+/* ================= Footer ================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+    margin-top:50px;
+}
+
+/* ================= Dark Mode ================= */
+
+.dark{
+    background:#111;
+    color:#eeeeee;
+}
+
+.dark header{
+    background:#000;
+}
+
+.dark .card{
+    background:#1d1d1d;
+    color:#eeeeee;
+}
+
+.dark nav a{
+    color:white;
+}
+
+.dark nav a:hover{
+    color:#7eb7ff;
+}
+
+.dark .hero h3{
+    color:#7eb7ff;
+}
+
+.dark button{
+    background:#333;
+    color:white;
+}
+
+/* ================= Tablet ================= */
+
+@media (max-width:900px){
+
+    main{
+        width:94%;
+    }
+
+    .hero{
+        gap:30px;
+    }
+
+    .hero img{
+        width:160px;
+        height:160px;
+    }
+
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero img{
+        width:150px;
+        height:150px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero h3{
+        font-size:1.2rem;
+    }
+
+    .card{
+        padding:25px;
+    }
+
+}
