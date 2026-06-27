@@ -1,1 +1,1 @@
-Copy photo.jpg to assets/img and CV.pdf to assets/pdf.
+Copy photo.jpg to assets/img/ and CV.pdf to assets/pdf/. Each page is independent.
