@@ -1,0 +1,1 @@
+Replace assets/img/photo.jpg with your photo and assets/pdf/CV.pdf with your CV.
