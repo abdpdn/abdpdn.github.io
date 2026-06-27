@@ -2,27 +2,21 @@ window.onload = function () {
 
     const button = document.getElementById("theme");
 
-    // Load saved theme
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark");
-    }
+    // Apply saved theme
+    const isDark = localStorage.getItem("theme") === "dark";
+    document.body.classList.toggle("dark", isDark);
 
-    // Toggle theme
+    // Theme toggle
     if (button) {
-        button.onclick = function () {
+        button.addEventListener("click", function () {
 
-            document.body.classList.toggle("dark");
+            const dark = document.body.classList.toggle("dark");
+            localStorage.setItem("theme", dark ? "dark" : "light");
 
-            if (document.body.classList.contains("dark")) {
-                localStorage.setItem("theme", "dark");
-            } else {
-                localStorage.setItem("theme", "light");
-            }
-
-        };
+        });
     }
 
-    // Hide navigation tabs
+    // Hide selected navigation tabs
     ["news.html", "software.html", "contact.html"].forEach(function(page) {
 
         document.querySelectorAll('a[href="' + page + '"]').forEach(function(link) {

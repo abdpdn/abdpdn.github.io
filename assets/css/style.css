@@ -8,12 +8,17 @@
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
+html{
     background:#f5f7fb;
     color:#222;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:inherit;
+    color:inherit;
     line-height:1.7;
-    transition:background .3s,color .3s;
+    transition:background .3s ease,color .3s ease;
 }
 
 /* ================= Header ================= */
@@ -28,6 +33,7 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
+    transition:background .3s ease;
 }
 
 header h1{
@@ -43,7 +49,7 @@ nav a{
     color:white;
     text-decoration:none;
     font-weight:500;
-    transition:.25s;
+    transition:color .25s;
 }
 
 nav a:hover{
@@ -65,6 +71,7 @@ main{
     padding:35px;
     border-radius:12px;
     box-shadow:0 8px 24px rgba(0,0,0,.08);
+    transition:background .3s ease,color .3s ease;
 }
 
 /* ================= Hero ================= */
@@ -94,6 +101,7 @@ main{
     color:#1f3b63;
     font-weight:500;
     margin-bottom:20px;
+    transition:color .3s ease;
 }
 
 .hero p{
@@ -102,7 +110,8 @@ main{
 
 /* ================= Lists ================= */
 
-ul,ol{
+ul,
+ol{
     padding-left:24px;
 }
 
@@ -119,6 +128,7 @@ button{
     padding:8px 14px;
     border-radius:6px;
     font-size:15px;
+    transition:background .3s ease,color .3s ease;
 }
 
 /* ================= Footer ================= */
@@ -128,39 +138,44 @@ footer{
     padding:30px;
     color:#666;
     margin-top:50px;
+    transition:color .3s ease;
 }
 
 /* ================= Dark Mode ================= */
 
-.dark{
+html.dark{
     background:#111;
     color:#eeeeee;
 }
 
-.dark header{
+html.dark header{
     background:#000;
 }
 
-.dark .card{
+html.dark .card{
     background:#1d1d1d;
     color:#eeeeee;
 }
 
-.dark nav a{
+html.dark nav a{
     color:white;
 }
 
-.dark nav a:hover{
+html.dark nav a:hover{
     color:#7eb7ff;
 }
 
-.dark .hero h3{
+html.dark .hero h3{
     color:#7eb7ff;
 }
 
-.dark button{
+html.dark button{
     background:#333;
     color:white;
+}
+
+html.dark footer{
+    color:#bdbdbd;
 }
 
 /* ================= Tablet ================= */
