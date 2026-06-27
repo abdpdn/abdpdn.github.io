@@ -1,0 +1,1 @@
+document.getElementById('toggle').onclick=()=>{document.body.classList.toggle('dark');localStorage.theme=document.body.classList.contains('dark')};if(localStorage.theme==='true')document.body.classList.add('dark');

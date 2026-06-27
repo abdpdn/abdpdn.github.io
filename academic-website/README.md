@@ -1,0 +1,1 @@
+Place your photo as photo.jpg beside index.html.

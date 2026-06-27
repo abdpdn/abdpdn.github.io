@@ -1,1 +1,0 @@
-const b=document.getElementById('theme');const t=localStorage.getItem('theme')||'light';document.documentElement.dataset.theme=t;b.onclick=()=>{let n=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=n;localStorage.setItem('theme',n)};
