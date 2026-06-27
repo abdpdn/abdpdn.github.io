@@ -1,1 +1,1 @@
-Place your photo as photo.jpg beside index.html.
+Copy photo.jpg to assets/img and CV.pdf to assets/pdf.
