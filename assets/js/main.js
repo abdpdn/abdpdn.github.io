@@ -25,4 +25,13 @@ window.onload = function () {
         };
     }
 
+    // Hide navigation tabs
+    ["news.html", "software.html", "contact.html"].forEach(function(page) {
+
+        document.querySelectorAll('a[href="' + page + '"]').forEach(function(link) {
+            link.style.display = "none";
+        });
+
+    });
+
 };
