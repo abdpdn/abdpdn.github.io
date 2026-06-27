@@ -5,7 +5,6 @@ window.onload = function () {
     // Load saved theme
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark");
-        if (button) button.textContent = "☀️";
     }
 
     // Toggle theme
@@ -16,10 +15,8 @@ window.onload = function () {
 
             if (document.body.classList.contains("dark")) {
                 localStorage.setItem("theme", "dark");
-                button.textContent = "☀️";
             } else {
                 localStorage.setItem("theme", "light");
-                button.textContent = "🌙";
             }
 
         };
