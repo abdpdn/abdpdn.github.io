@@ -109,28 +109,46 @@ main{
 }
 
 
-/* ================= Social Icons ================= */
+<!-- Social Icons -->
 
-.social-links{
-    display:flex;
-    gap:18px;
-    margin-top:20px;
-}
+<div class="social-links">
 
-.social-links a{
-    font-size:2.3rem;
-    color:#1f3b63;
-    text-decoration:none;
-    transition:transform .2s ease, color .2s ease;
-}
+    <a href="https://scholar.google.com/citations?user=vPQZAQsAAAAJ&hl=en"
+       target="_blank"
+       title="Google Scholar">
+        <i class="fas fa-graduation-cap"></i>
+    </a>
 
-.social-links a:hover{
-    transform:scale(1.15);
-}
+    <a href="https://orcid.org/0000-0002-5118-7982"
+       target="_blank"
+       title="ORCID">
+        <i class="fab fa-orcid"></i>
+    </a>
 
-html.dark .social-links a{
-    color:#7eb7ff;
-}
+    <a href="https://arxiv.org/search/?query=Ashirbad+Padhan&searchtype=author"
+       target="_blank"
+       title="arXiv">
+        <i class="ai ai-arxiv"></i>
+    </a>
+
+    <a href="https://www.researchgate.net/profile/Ashirbad-Padhan-2"
+       target="_blank"
+       title="ResearchGate">
+        <i class="fab fa-researchgate"></i>
+    </a>
+
+    <a href="https://github.com/abdpdn"
+       target="_blank"
+       title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="mailto:padhanashirbad@gmail.com"
+       title="Email">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
 
 
 /* ================= Lists ================= */
