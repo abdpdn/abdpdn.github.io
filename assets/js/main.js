@@ -13,7 +13,7 @@ window.onload = function () {
     }
 
     // Hide selected navigation tabs
-    ["news.html", "software.html", "contact.html"].forEach(function (page) {
+    ["/talks/", "news.html", "software.html", "contact.html"].forEach(function (page) {
 
         document.querySelectorAll('a[href="' + page + '"]').forEach(function (link) {
             link.style.display = "none";
