@@ -8,13 +8,13 @@
     <title>Ashirbad Padhan | Research</title>
 
     <script>
-    if (localStorage.getItem("theme") === "dark") {
-        document.documentElement.classList.add("dark");
-    }
-</script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+        }
+    </script>
 
-<link rel="stylesheet" href="/assets/css/style.css">
-<script defer src="/assets/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script defer src="/assets/js/main.js"></script>
 </head>
 
 <body>
@@ -30,7 +30,12 @@
         <a href="/cv/">CV</a>
     </nav>
 
-    <button id="theme" aria-label="Toggle dark mode">🌓</button>
+    <button id="theme"
+            type="button"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode">
+        🌓
+    </button>
 </header>
 
 <main>
@@ -40,34 +45,277 @@
         <h1>Research</h1>
 
         <p>
-            My research focuses on the numerical study of quantum many-body systems,
+            My research concerns the numerical study of quantum many-body systems,
             particularly low-dimensional lattice models in which interactions,
-            disorder, topology, and quantum entanglement give rise to unconventional
-            phases and phase transitions.
+            disorder, topology, and quantum entanglement produce unconventional
+            phases and dynamical behavior. I am interested both in identifying new
+            quantum phases and in understanding the microscopic mechanisms that
+            distinguish them.
         </p>
 
         <h2>Research Topics</h2>
 
-        <p>
-            I study strongly correlated bosonic, fermionic, and spin systems, with
-            particular emphasis on topological phases and quantum phase transitions.
-            A major part of my work concerns the effects of interactions and
-            quasiperiodic disorder on localization, transport, topology, and
-            many-body dynamics. I am also interested in many-body localization,
-            Thouless pumping, non-Hermitian quantum systems, and the characterization
-            of quantum phases through entanglement, spectral, and topological
-            diagnostics.
-        </p>
+        <section class="research-entry">
 
-        <h2>Methods</h2>
+            <div class="research-text">
 
-        <p>
-            My work is primarily computational. I use density-matrix renormalization
-            group and matrix-product-state methods to study ground-state and dynamical
-            properties of one-dimensional systems. I also employ exact diagonalization,
-            sparse-matrix techniques, cluster mean-field theory, finite-size scaling,
-            and large-scale simulations on high-performance computing clusters.
-        </p>
+                <h3>Quantum Phase Transitions</h3>
+
+                <p>
+                    Quantum phase transitions are qualitative changes in the ground
+                    state of a system driven by parameters such as interaction
+                    strength, hopping amplitude, magnetic field, or disorder. Unlike
+                    thermal transitions, they occur at zero temperature and arise
+                    from quantum fluctuations.
+                </p>
+
+                <p>
+                    I study these transitions by examining excitation gaps,
+                    correlation functions, order parameters, entanglement entropy,
+                    and finite-size scaling. Particular attention is given to
+                    continuous transitions, Berezinskii–Kosterlitz–Thouless
+                    transitions, and transitions between insulating, ordered,
+                    localized, and topological phases.
+                </p>
+
+            </div>
+
+            <figure class="research-figure">
+                <img src="/assets/img/research/quantum-phase-transition.png"
+                     alt="Representative phase diagram showing different quantum phases separated by phase boundaries"
+                     loading="lazy">
+
+                <figcaption>
+                    Representative phase diagram illustrating how the ground state
+                    changes as microscopic parameters are varied.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section class="research-entry">
+
+            <div class="research-text">
+
+                <h3>Topological Phases in Interacting Systems</h3>
+
+                <p>
+                    Topological phases cannot always be characterized by conventional
+                    local order parameters. Instead, they are identified through
+                    global properties such as quantized topological invariants,
+                    protected edge states, entanglement signatures, and quantized
+                    transport.
+                </p>
+
+                <p>
+                    My work focuses on how particle interactions modify or generate
+                    topological phases in bosonic, fermionic, and spin systems. I use
+                    quantities such as Berry phases, winding numbers, charge pumping,
+                    edge-state densities, entanglement spectra, and nonlocal order
+                    parameters to distinguish topological phases from conventional
+                    insulating states.
+                </p>
+
+            </div>
+
+            <figure class="research-figure">
+                <img src="/assets/img/research/topological-phase.png"
+                     alt="Representative one-dimensional lattice with alternating bonds and localized edge states"
+                     loading="lazy">
+
+                <figcaption>
+                    Schematic of a dimerized lattice with boundary modes, a common
+                    signature of one-dimensional topological phases.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section class="research-entry">
+
+            <div class="research-text">
+
+                <h3>Many-Body Localization</h3>
+
+                <p>
+                    In an isolated interacting quantum system, disorder can prevent
+                    thermalization and preserve information about the initial state
+                    for very long times. This phenomenon is known as many-body
+                    localization.
+                </p>
+
+                <p>
+                    I investigate localization and relaxation in disordered and
+                    quasiperiodic systems using spectral statistics, local
+                    autocorrelation functions, imbalance dynamics, entanglement
+                    growth, resonance structure, and site-resolved relaxation times.
+                    A central goal is to understand how rare or long-range resonances
+                    destabilize localized behavior and influence the crossover toward
+                    thermalization.
+                </p>
+
+            </div>
+
+            <figure class="research-figure">
+                <img src="/assets/img/research/many-body-localization.png"
+                     alt="Representative time evolution showing slow relaxation and persistent memory in a localized quantum system"
+                     loading="lazy">
+
+                <figcaption>
+                    Typical dynamical behavior in a localized system, where local
+                    observables retain memory of their initial values.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section class="research-entry">
+
+            <div class="research-text">
+
+                <h3>Non-Hermitian Quantum Matter</h3>
+
+                <p>
+                    Non-Hermitian models provide effective descriptions of systems
+                    with gain, loss, dissipation, or asymmetric transport. Their
+                    spectra can become complex, and their eigenstates may display
+                    behavior that has no direct counterpart in conventional closed
+                    quantum systems.
+                </p>
+
+                <p>
+                    I study localization, spectral transitions, non-Hermitian
+                    topology, mobility edges, and the non-Hermitian skin effect in
+                    quasiperiodic and interacting lattice models. These systems are
+                    characterized using complex-energy spectra, inverse participation
+                    ratios, winding numbers, boundary sensitivity, and real-to-complex
+                    spectral transitions.
+                </p>
+
+            </div>
+
+            <figure class="research-figure">
+                <img src="/assets/img/research/non-hermitian.png"
+                     alt="Representative complex-energy spectrum and accumulation of states near one boundary"
+                     loading="lazy">
+
+                <figcaption>
+                    Representative complex spectrum and boundary accumulation
+                    associated with non-Hermitian lattice systems.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <h2>Numerical Methods</h2>
+
+        <section class="method-entry">
+
+            <div class="method-text">
+
+                <h3>Density-Matrix Renormalization Group and Matrix-Product States</h3>
+
+                <p>
+                    Density-matrix renormalization group is one of the most accurate
+                    numerical methods for ground states of one-dimensional interacting
+                    systems. In the matrix-product-state formulation, the many-body
+                    wave function is represented in a compressed form that efficiently
+                    captures physically relevant entanglement.
+                </p>
+
+                <p>
+                    I use these methods to compute ground-state energies, excitation
+                    gaps, density and bond profiles, correlation functions,
+                    entanglement entropy, entanglement spectra, and time evolution in
+                    large one-dimensional systems.
+                </p>
+
+            </div>
+
+            <figure class="research-figure">
+                <img src="/assets/img/research/dmrg-mps.png"
+                     alt="Schematic representation of a matrix-product state as a chain of connected tensors"
+                     loading="lazy">
+
+                <figcaption>
+                    Matrix-product-state representation of a many-body wave function,
+                    forming the computational basis of DMRG.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section class="method-entry">
+
+            <div class="method-text">
+
+                <h3>Exact Diagonalization</h3>
+
+                <p>
+                    Exact diagonalization constructs the many-body Hamiltonian in a
+                    chosen basis and computes its eigenvalues and eigenvectors. It
+                    provides numerically exact results for finite systems, although
+                    the accessible system size is limited by the exponential growth
+                    of the Hilbert space.
+                </p>
+
+                <p>
+                    I use full and sparse diagonalization to study spectra,
+                    eigenstates, level statistics, localization measures, quantum
+                    dynamics, correlation functions, and finite-size trends. It is
+                    particularly useful for highly excited states and nonequilibrium
+                    dynamics.
+                </p>
+
+            </div>
+
+            <figure class="research-figure">
+                <img src="/assets/img/research/exact-diagonalization.png"
+                     alt="Representative many-body energy spectrum obtained by exact diagonalization"
+                     loading="lazy">
+
+                <figcaption>
+                    Many-body energy levels obtained from the numerical
+                    diagonalization of a finite Hamiltonian.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section class="method-entry">
+
+            <div class="method-text">
+
+                <h3>Cluster Mean-Field Theory</h3>
+
+                <p>
+                    Cluster mean-field theory treats the quantum correlations within
+                    a finite cluster exactly while approximating the coupling between
+                    neighboring clusters through self-consistent mean fields.
+                </p>
+
+                <p>
+                    I use this method to obtain approximate phase diagrams and order
+                    parameters for lattice models that are difficult to access
+                    directly at large sizes. It provides a useful compromise between
+                    single-site mean-field theory and fully many-body numerical
+                    methods.
+                </p>
+
+            </div>
+
+            <figure class="research-figure">
+                <img src="/assets/img/research/cluster-mean-field.png"
+                     alt="Schematic lattice divided into interacting clusters coupled through mean fields"
+                     loading="lazy">
+
+                <figcaption>
+                    Cluster decomposition in which correlations are treated exactly
+                    within each cluster and approximately between clusters.
+                </figcaption>
+            </figure>
+
+        </section>
 
     </div>
 
