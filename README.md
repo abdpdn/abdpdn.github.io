@@ -1,1 +1,5 @@
-Copy photo.jpg to assets/img/ and CV.pdf to assets/pdf/. Each page is independent.
+# Ashirbad Padhan — Academic Website
+
+Source code for my personal academic website:
+
+https://abdpdn.github.io/
