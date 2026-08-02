@@ -39,6 +39,8 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* ================= Header ================= */
+
 header {
     background: var(--header-bg);
     color: var(--header-text);
@@ -87,6 +89,8 @@ nav a:focus-visible {
     border-radius: 2px;
 }
 
+/* ================= Theme Toggle ================= */
+
 #theme {
     position: relative;
     width: 42px;
@@ -100,7 +104,15 @@ nav a:focus-visible {
     cursor: pointer;
     font-size: 0;
     line-height: 1;
-    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 #theme:hover {
@@ -108,34 +120,42 @@ nav a:focus-visible {
     border-color: rgba(255, 255, 255, 0.72);
 }
 
+#theme:focus,
 #theme:focus-visible {
-    outline: 2px solid #ffffff;
-    outline-offset: 3px;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.20);
 }
 
 #theme:active {
     transform: scale(0.94);
+    box-shadow: none;
 }
 
+/* Moon icon in light mode */
 #theme::before {
     content: "";
     position: absolute;
     width: 17px;
     height: 17px;
-    top: 11px;
-    left: 10px;
+    top: 50%;
+    left: 50%;
     border-radius: 50%;
     background: transparent;
     box-shadow: 6px 0 0 0 currentColor;
-    transform: rotate(-25deg);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    transform-origin: center;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
+/* Sun icon in dark mode */
 html.dark #theme::before {
     width: 14px;
     height: 14px;
-    top: 13px;
-    left: 13px;
+    top: 50%;
+    left: 50%;
     background: currentColor;
     box-shadow:
         0 -9px 0 -6px currentColor,
@@ -146,8 +166,10 @@ html.dark #theme::before {
         -6px -6px 0 -6px currentColor,
         6px -6px 0 -6px currentColor,
         -6px 6px 0 -6px currentColor;
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
 }
+
+/* ================= Main ================= */
 
 main {
     width: 92%;
@@ -155,13 +177,18 @@ main {
     margin: 50px auto;
 }
 
+/* ================= Cards ================= */
+
 .card {
     background: var(--card-bg);
     padding: 40px;
     border: 1px solid rgba(0, 0, 0, 0.03);
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .card h1 {
@@ -191,6 +218,8 @@ main {
 .card p + p {
     margin-top: 12px;
 }
+
+/* ================= Hero ================= */
 
 .hero {
     display: flex;
@@ -226,6 +255,8 @@ main {
 .hero p {
     margin-bottom: 12px;
 }
+
+/* ================= Research and Methods ================= */
 
 .research-entry,
 .method-entry {
@@ -269,7 +300,10 @@ main {
     background: #ffffff;
     padding: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .research-figure img:hover {
@@ -284,6 +318,8 @@ main {
     text-align: center;
     transition: color 0.3s ease;
 }
+
+/* ================= Social Links ================= */
 
 .social-links {
     display: flex;
@@ -305,24 +341,33 @@ main {
     color: var(--icon-color);
     text-decoration: none;
     font-size: 23px;
-    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.social-links a:hover,
-.social-links a:focus-visible {
+.social-links a:hover {
     transform: translateY(-2px);
     background: var(--icon-hover-bg);
     border-color: var(--icon-color);
     box-shadow: 0 5px 13px rgba(0, 0, 0, 0.12);
 }
 
+.social-links a:focus,
 .social-links a:focus-visible {
-    outline: 2px solid var(--icon-color);
-    outline-offset: 3px;
+    outline: none;
+    border-color: var(--icon-color);
+    box-shadow: 0 0 0 3px rgba(31, 59, 99, 0.15);
 }
 
 .social-links a:active {
     transform: translateY(0);
+    box-shadow: none;
 }
 
 .social-links i,
@@ -330,6 +375,8 @@ main {
     color: inherit;
     fill: currentColor;
 }
+
+/* ================= Links ================= */
 
 main a,
 main a:visited {
@@ -340,6 +387,8 @@ main a:hover {
     text-decoration-thickness: 2px;
 }
 
+/* ================= Lists ================= */
+
 ul,
 ol {
     padding-left: 24px;
@@ -349,6 +398,8 @@ li {
     margin-bottom: 8px;
 }
 
+/* ================= Footer ================= */
+
 footer {
     text-align: center;
     padding: 30px;
@@ -356,6 +407,8 @@ footer {
     margin-top: 50px;
     transition: color 0.3s ease;
 }
+
+/* ================= Dark Mode ================= */
 
 html.dark {
     --page-bg: #101214;
@@ -391,6 +444,13 @@ html.dark .research-figure img {
     border-color: #4d5560;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
 }
+
+html.dark .social-links a:focus,
+html.dark .social-links a:focus-visible {
+    box-shadow: 0 0 0 3px rgba(217, 228, 242, 0.14);
+}
+
+/* ================= Tablet ================= */
 
 @media (max-width: 1100px) {
     main {
@@ -434,6 +494,8 @@ html.dark .research-figure img {
     }
 }
 
+/* ================= Mobile ================= */
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -456,15 +518,7 @@ html.dark .research-figure img {
         height: 38px;
     }
 
-    #theme::before {
-        top: 9px;
-        left: 8px;
-    }
-
-    html.dark #theme::before {
-        top: 11px;
-        left: 11px;
-    }
+    /* Icon stays centered automatically through 50% positioning */
 
     main {
         width: 95%;
@@ -518,6 +572,8 @@ html.dark .research-figure img {
         justify-content: center;
     }
 }
+
+/* ================= Small Mobile ================= */
 
 @media (max-width: 480px) {
     main {
