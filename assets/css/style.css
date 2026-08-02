@@ -39,8 +39,6 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ================= Header ================= */
-
 header {
     background: var(--header-bg);
     color: var(--header-text);
@@ -89,8 +87,6 @@ nav a:focus-visible {
     border-radius: 2px;
 }
 
-/* ================= Theme Toggle ================= */
-
 #theme {
     position: relative;
     width: 42px;
@@ -104,10 +100,7 @@ nav a:focus-visible {
     cursor: pointer;
     font-size: 0;
     line-height: 1;
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 #theme:hover {
@@ -135,10 +128,7 @@ nav a:focus-visible {
     background: transparent;
     box-shadow: 6px 0 0 0 currentColor;
     transform: rotate(-25deg);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 html.dark #theme::before {
@@ -159,26 +149,19 @@ html.dark #theme::before {
     transform: rotate(0deg);
 }
 
-/* ================= Main ================= */
-
 main {
-    width: 90%;
-    max-width: 1200px;
+    width: 92%;
+    max-width: 1400px;
     margin: 50px auto;
 }
 
-/* ================= Cards ================= */
-
 .card {
     background: var(--card-bg);
-    padding: 35px;
+    padding: 40px;
     border: 1px solid rgba(0, 0, 0, 0.03);
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .card h1 {
@@ -186,25 +169,28 @@ main {
 }
 
 .card h2 {
-    margin-top: 28px;
-    margin-bottom: 12px;
+    margin-top: 32px;
+    margin-bottom: 14px;
     color: var(--heading-color);
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     transition: color 0.3s ease;
 }
 
 .card h3 {
     color: var(--heading-color);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
     line-height: 1.35;
     transition: color 0.3s ease;
+}
+
+.card p {
+    max-width: 76ch;
 }
 
 .card p + p {
     margin-top: 12px;
 }
-
-/* ================= Hero ================= */
 
 .hero {
     display: flex;
@@ -241,15 +227,13 @@ main {
     margin-bottom: 12px;
 }
 
-/* ================= Research and Methods ================= */
-
 .research-entry,
 .method-entry {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 250px;
-    gap: 32px;
-    align-items: start;
-    padding: 24px 0;
+    grid-template-columns: minmax(360px, 0.95fr) minmax(460px, 1.05fr);
+    gap: 44px;
+    align-items: center;
+    padding: 34px 0;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -263,36 +247,43 @@ main {
     min-width: 0;
 }
 
+.research-text p,
+.method-text p {
+    max-width: none;
+}
+
 .research-figure {
     width: 100%;
-    max-width: 250px;
+    max-width: 620px;
     margin: 0 auto;
 }
 
 .research-figure img {
     display: block;
     width: 100%;
-    height: 180px;
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: contain;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
-    background: var(--icon-bg);
-    padding: 8px;
-    transition:
-        background 0.3s ease,
-        border-color 0.3s ease;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-figure img:hover {
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.13);
 }
 
 .research-figure figcaption {
-    margin-top: 8px;
+    margin-top: 10px;
     color: var(--muted-text);
-    font-size: 0.84rem;
-    line-height: 1.45;
+    font-size: 0.9rem;
+    line-height: 1.5;
     text-align: center;
     transition: color 0.3s ease;
 }
-
-/* ================= Social Links ================= */
 
 .social-links {
     display: flex;
@@ -314,12 +305,7 @@ main {
     color: var(--icon-color);
     text-decoration: none;
     font-size: 23px;
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-links a:hover,
@@ -345,8 +331,6 @@ main {
     fill: currentColor;
 }
 
-/* ================= Links ================= */
-
 main a,
 main a:visited {
     color: var(--heading-color);
@@ -355,8 +339,6 @@ main a:visited {
 main a:hover {
     text-decoration-thickness: 2px;
 }
-
-/* ================= Lists ================= */
 
 ul,
 ol {
@@ -367,8 +349,6 @@ li {
     margin-bottom: 8px;
 }
 
-/* ================= Footer ================= */
-
 footer {
     text-align: center;
     padding: 30px;
@@ -376,8 +356,6 @@ footer {
     margin-top: 50px;
     transition: color 0.3s ease;
 }
-
-/* ================= Dark Mode ================= */
 
 html.dark {
     --page-bg: #101214;
@@ -408,13 +386,29 @@ html.dark .hero img {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.42);
 }
 
-/* ================= Tablet ================= */
+html.dark .research-figure img {
+    background: #f7f7f7;
+    border-color: #4d5560;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+}
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     main {
         width: 94%;
     }
 
+    .research-entry,
+    .method-entry {
+        grid-template-columns: minmax(300px, 0.9fr) minmax(390px, 1.1fr);
+        gap: 30px;
+    }
+
+    .research-figure {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 900px) {
     .hero {
         gap: 30px;
     }
@@ -426,20 +420,19 @@ html.dark .hero img {
 
     .research-entry,
     .method-entry {
-        grid-template-columns: minmax(0, 1fr) 220px;
+        grid-template-columns: 1fr;
         gap: 24px;
+        align-items: start;
     }
 
     .research-figure {
-        max-width: 220px;
+        max-width: 680px;
     }
 
-    .research-figure img {
-        height: 160px;
+    .research-figure figcaption {
+        font-size: 0.88rem;
     }
 }
-
-/* ================= Mobile ================= */
 
 @media (max-width: 768px) {
     header {
@@ -474,6 +467,7 @@ html.dark .hero img {
     }
 
     main {
+        width: 95%;
         margin: 32px auto;
     }
 
@@ -496,30 +490,34 @@ html.dark .hero img {
     }
 
     .card {
-        padding: 25px;
+        padding: 26px;
     }
 
     .research-entry,
     .method-entry {
         grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 22px 0;
+        gap: 20px;
+        padding: 28px 0;
     }
 
     .research-figure {
-        max-width: 320px;
+        max-width: 100%;
     }
 
     .research-figure img {
-        height: 210px;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        padding: 6px;
+    }
+
+    .research-figure figcaption {
+        font-size: 0.84rem;
     }
 
     .social-links {
         justify-content: center;
     }
 }
-
-/* ================= Small Mobile ================= */
 
 @media (max-width: 480px) {
     main {
@@ -532,12 +530,9 @@ html.dark .hero img {
         border-radius: 10px;
     }
 
-    .research-figure {
-        max-width: 280px;
-    }
-
     .research-figure img {
-        height: 180px;
+        padding: 4px;
+        border-radius: 8px;
     }
 
     .research-figure figcaption {
